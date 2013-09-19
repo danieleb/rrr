@@ -1,0 +1,12 @@
+; $Id$
+name = Biblio Autocomplete
+description = Allows other modules to provide autocomplete functionality to Biblio nodes
+core = 7.x
+dependencies[] = biblio
+package = Biblio
+; Information added by drupal.org packaging script on 2013-04-18
+version = "7.x-1.4"
+core = "7.x"
+project = "biblio_autocomplete"
+datestamp = "1366294251"
+
