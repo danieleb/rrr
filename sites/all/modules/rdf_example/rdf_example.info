@@ -1,5 +1,0 @@
-name = RDF Example
-description = Demonstrates an RDF mapping using the RDF mapping API.
-core = 7.x
-dependencies[] = richsnippets
-dependencies[] = field_collection
