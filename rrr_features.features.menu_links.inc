@@ -10,23 +10,6 @@
 function rrr_features_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: main-menu_about:node/25
-  $menu_links['main-menu_about:node/25'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/25',
-    'router_path' => 'node/%',
-    'link_title' => 'About',
-    'options' => array(
-      'identifier' => 'main-menu_about:node/25',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'customized' => 0,
-  );
   // Exported menu link: main-menu_datasets:datasets-view
   $menu_links['main-menu_datasets:datasets-view'] = array(
     'menu_name' => 'main-menu',
@@ -60,23 +43,6 @@ function rrr_features_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => -49,
     'customized' => 1,
-  );
-  // Exported menu link: main-menu_home:node/24
-  $menu_links['main-menu_home:node/24'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/24',
-    'router_path' => 'node/%',
-    'link_title' => 'Home',
-    'options' => array(
-      'identifier' => 'main-menu_home:node/24',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -50,
-    'customized' => 0,
   );
   // Exported menu link: main-menu_publications:publications-view
   $menu_links['main-menu_publications:publications-view'] = array(
@@ -1581,7 +1547,6 @@ function rrr_features_menu_default_menu_links() {
   );
   // Translatables
   // Included for use with string extractors like potx.
-  t('About');
   t('Account settings');
   t('Actions');
   t('Add Resource or Experiment');
@@ -1609,7 +1574,6 @@ function rrr_features_menu_default_menu_links() {
   t('Field dependencies');
   t('Field list');
   t('File system');
-  t('Home');
   t('IP address blocking');
   t('Image styles');
   t('Image toolkit');
