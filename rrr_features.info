@@ -141,7 +141,6 @@ features[menu_links][] = navigation_compose-tips:filter/tips
 features[menu_links][] = navigation_import:biblio/import
 features[menu_links][] = navigation_keywords:biblio/keywords
 features[menu_links][] = navigation_static-page:node/add/page
-features[menu_links][] = navigation_static-page:node/add/static-page
 features[menu_links][] = user-menu_log-out:user/logout
 features[menu_links][] = user-menu_user-account:user
 features[node][] = page

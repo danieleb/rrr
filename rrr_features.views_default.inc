@@ -12,7 +12,7 @@ function rrr_features_views_default_views() {
 
   $view = new view();
   $view->name = 'related_experiments';
-  $view->description = 'displays experiments related to the current resource';
+  $view->description = 'A view listing experiments that use the current resource';
   $view->tag = 'default';
   $view->base_table = 'node';
   $view->human_name = 'Related experiments';
@@ -28,52 +28,41 @@ function rrr_features_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'grid';
   $handler->display->display_options['style_options']['columns'] = '3';
   $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['hide_empty'] = TRUE;
   /* Footer: Global: Result summary */
   $handler->display->display_options['footer']['result']['id'] = 'result';
   $handler->display->display_options['footer']['result']['table'] = 'views';
   $handler->display->display_options['footer']['result']['field'] = 'result';
-  /* Relationship: Content: Dataset (field_dataset) - reverse */
-  $handler->display->display_options['relationships']['reverse_field_dataset_node']['id'] = 'reverse_field_dataset_node';
-  $handler->display->display_options['relationships']['reverse_field_dataset_node']['table'] = 'node';
-  $handler->display->display_options['relationships']['reverse_field_dataset_node']['field'] = 'reverse_field_dataset_node';
-  /* Relationship: Content: Experiment (field_experiment) - reverse */
-  $handler->display->display_options['relationships']['reverse_field_experiment_node']['id'] = 'reverse_field_experiment_node';
-  $handler->display->display_options['relationships']['reverse_field_experiment_node']['table'] = 'node';
-  $handler->display->display_options['relationships']['reverse_field_experiment_node']['field'] = 'reverse_field_experiment_node';
-  /* Relationship: Content: Publication (field_publication) - reverse */
-  $handler->display->display_options['relationships']['reverse_field_publication_node']['id'] = 'reverse_field_publication_node';
-  $handler->display->display_options['relationships']['reverse_field_publication_node']['table'] = 'node';
-  $handler->display->display_options['relationships']['reverse_field_publication_node']['field'] = 'reverse_field_publication_node';
-  /* Relationship: Content: Software (field_software) - reverse */
-  $handler->display->display_options['relationships']['reverse_field_software_node']['id'] = 'reverse_field_software_node';
-  $handler->display->display_options['relationships']['reverse_field_software_node']['table'] = 'node';
-  $handler->display->display_options['relationships']['reverse_field_software_node']['field'] = 'reverse_field_software_node';
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['relationship'] = 'reverse_field_dataset_node';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title_1']['id'] = 'title_1';
-  $handler->display->display_options['fields']['title_1']['table'] = 'node';
-  $handler->display->display_options['fields']['title_1']['field'] = 'title';
-  $handler->display->display_options['fields']['title_1']['relationship'] = 'reverse_field_publication_node';
-  $handler->display->display_options['fields']['title_1']['label'] = '';
-  $handler->display->display_options['fields']['title_1']['element_label_colon'] = FALSE;
+  /* Relationship: Broken/missing handler */
+  $handler->display->display_options['relationships']['reverse_field_resource_publications_node']['id'] = 'reverse_field_resource_publications_node';
+  $handler->display->display_options['relationships']['reverse_field_resource_publications_node']['table'] = 'node';
+  $handler->display->display_options['relationships']['reverse_field_resource_publications_node']['field'] = 'reverse_field_resource_publications_node';
+  $handler->display->display_options['relationships']['reverse_field_resource_publications_node']['label'] = 'field_resource_publications';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title_2']['id'] = 'title_2';
   $handler->display->display_options['fields']['title_2']['table'] = 'node';
   $handler->display->display_options['fields']['title_2']['field'] = 'title';
-  $handler->display->display_options['fields']['title_2']['relationship'] = 'reverse_field_software_node';
+  $handler->display->display_options['fields']['title_2']['relationship'] = 'reverse_field_dataset_node';
   $handler->display->display_options['fields']['title_2']['label'] = '';
   $handler->display->display_options['fields']['title_2']['element_label_colon'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['relationship'] = 'reverse_field_software_node';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title_3']['id'] = 'title_3';
+  $handler->display->display_options['fields']['title_3']['table'] = 'node';
+  $handler->display->display_options['fields']['title_3']['field'] = 'title';
+  $handler->display->display_options['fields']['title_3']['relationship'] = 'reverse_field_publication_node';
+  $handler->display->display_options['fields']['title_3']['label'] = '';
+  $handler->display->display_options['fields']['title_3']['element_label_colon'] = FALSE;
   /* Field: Content: Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
@@ -84,48 +73,48 @@ function rrr_features_views_default_views() {
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
     'image_style' => 'medium',
-    'image_link' => 'content',
+    'image_link' => '',
   );
   /* Field: Content: Image */
   $handler->display->display_options['fields']['field_image_1']['id'] = 'field_image_1';
   $handler->display->display_options['fields']['field_image_1']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image_1']['field'] = 'field_image';
-  $handler->display->display_options['fields']['field_image_1']['relationship'] = 'reverse_field_publication_node';
+  $handler->display->display_options['fields']['field_image_1']['relationship'] = 'reverse_field_software_node';
   $handler->display->display_options['fields']['field_image_1']['label'] = '';
   $handler->display->display_options['fields']['field_image_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image_1']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image_1']['settings'] = array(
     'image_style' => 'medium',
-    'image_link' => 'content',
+    'image_link' => '',
   );
   /* Field: Content: Image */
   $handler->display->display_options['fields']['field_image_2']['id'] = 'field_image_2';
   $handler->display->display_options['fields']['field_image_2']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image_2']['field'] = 'field_image';
-  $handler->display->display_options['fields']['field_image_2']['relationship'] = 'reverse_field_software_node';
+  $handler->display->display_options['fields']['field_image_2']['relationship'] = 'reverse_field_publication_node';
   $handler->display->display_options['fields']['field_image_2']['label'] = '';
   $handler->display->display_options['fields']['field_image_2']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image_2']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image_2']['settings'] = array(
     'image_style' => 'medium',
-    'image_link' => 'content',
+    'image_link' => '',
   );
   /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
   /* Contextual filter: Content: Nid */
-  $handler->display->display_options['arguments']['nid_1']['id'] = 'nid_1';
-  $handler->display->display_options['arguments']['nid_1']['table'] = 'node';
-  $handler->display->display_options['arguments']['nid_1']['field'] = 'nid';
-  $handler->display->display_options['arguments']['nid_1']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['nid_1']['default_argument_type'] = 'node';
-  $handler->display->display_options['arguments']['nid_1']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['nid_1']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['nid_1']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['nid_1']['specify_validation'] = TRUE;
-  $handler->display->display_options['arguments']['nid_1']['validate']['type'] = 'node';
-  $handler->display->display_options['arguments']['nid_1']['validate_options']['types'] = array(
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['nid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['nid']['validate']['type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['validate_options']['types'] = array(
     'biblio' => 'biblio',
   );
   /* Filter criterion: Content: Published */
@@ -135,10 +124,37 @@ function rrr_features_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Biblio: Type of Publication */
+  $handler->display->display_options['filters']['tid']['id'] = 'tid';
+  $handler->display->display_options['filters']['tid']['table'] = 'biblio_types';
+  $handler->display->display_options['filters']['tid']['field'] = 'tid';
+  $handler->display->display_options['filters']['tid']['group_type'] = 'count';
+  $handler->display->display_options['filters']['tid']['operator'] = 'not in';
+  $handler->display->display_options['filters']['tid']['value'] = array(
+    'min' => '',
+    'max' => '',
+    'value' => '',
+    1000 => '1000',
+  );
+  $handler->display->display_options['filters']['tid']['group'] = 1;
 
   /* Display: Related experiments */
   $handler = $view->new_display('block', 'Related experiments', 'block');
-  $handler->display->display_options['block_description'] = 'experiments related to resource';
+  $handler->display->display_options['display_description'] = 'Experiments that are related to this resource';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Content: Dataset (field_dataset) - reverse */
+  $handler->display->display_options['relationships']['reverse_field_dataset_node']['id'] = 'reverse_field_dataset_node';
+  $handler->display->display_options['relationships']['reverse_field_dataset_node']['table'] = 'node';
+  $handler->display->display_options['relationships']['reverse_field_dataset_node']['field'] = 'reverse_field_dataset_node';
+  /* Relationship: Content: Software (field_software) - reverse */
+  $handler->display->display_options['relationships']['reverse_field_software_node']['id'] = 'reverse_field_software_node';
+  $handler->display->display_options['relationships']['reverse_field_software_node']['table'] = 'node';
+  $handler->display->display_options['relationships']['reverse_field_software_node']['field'] = 'reverse_field_software_node';
+  /* Relationship: Content: Publication (field_publication) - reverse */
+  $handler->display->display_options['relationships']['reverse_field_publication_node']['id'] = 'reverse_field_publication_node';
+  $handler->display->display_options['relationships']['reverse_field_publication_node']['table'] = 'node';
+  $handler->display->display_options['relationships']['reverse_field_publication_node']['field'] = 'reverse_field_publication_node';
+  $handler->display->display_options['block_description'] = 'Experiments related to resource';
   $export['related_experiments'] = $view;
 
   $view = new view();

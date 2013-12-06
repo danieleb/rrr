@@ -19,7 +19,7 @@ function rrr_features_node_info() {
     'page' => array(
       'name' => t('static page'),
       'base' => 'node_content',
-      'description' => t('a static page used for contacts, about us, welcome page, etc.'),
+      'description' => t('Use <em>basic pages</em> for your static content, such as an \'About us\' page.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
