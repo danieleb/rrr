@@ -1,7 +1,7 @@
 name = rrr_features
 core = 7.x
 package = Features
-version = 7.x-1.0-beta3
+version = 7.x-1.0-beta4
 project = rrr_features
 dependencies[] = admin_devel
 dependencies[] = admin_menu
@@ -69,6 +69,7 @@ features[menu_custom][] = navigation
 features[menu_custom][] = user-menu
 features[menu_links][] = main-menu_datasets:datasets-view
 features[menu_links][] = main-menu_experiments:experiments-view
+features[menu_links][] = main-menu_home:<front>
 features[menu_links][] = main-menu_publications:publications-view
 features[menu_links][] = main-menu_software:software-view
 features[menu_links][] = management_account-settings:admin/config/people/accounts

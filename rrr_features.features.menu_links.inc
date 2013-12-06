@@ -44,6 +44,26 @@ function rrr_features_menu_default_menu_links() {
     'weight' => -49,
     'customized' => 1,
   );
+  // Exported menu link: main-menu_home:<front>
+  $menu_links['main-menu_home:<front>'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Home',
+    'options' => array(
+      'identifier' => 'main-menu_home:<front>',
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -50,
+    'customized' => 1,
+  );
   // Exported menu link: main-menu_publications:publications-view
   $menu_links['main-menu_publications:publications-view'] = array(
     'menu_name' => 'main-menu',
@@ -1372,7 +1392,7 @@ function rrr_features_menu_default_menu_links() {
     'module' => 'system',
     'hidden' => 1,
     'external' => 0,
-    'has_children' => 1,
+    'has_children' => 0,
     'expanded' => 0,
     'weight' => -48,
     'customized' => 1,
@@ -1481,12 +1501,12 @@ function rrr_features_menu_default_menu_links() {
       'identifier' => 'navigation_static-page:node/add/page',
     ),
     'module' => 'system',
-    'hidden' => 0,
+    'hidden' => 1,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
     'weight' => 0,
-    'customized' => 0,
+    'customized' => 1,
     'parent_identifier' => 'navigation_add-content:node/add',
   );
   // Exported menu link: navigation_static-page:node/add/static-page
@@ -1574,6 +1594,7 @@ function rrr_features_menu_default_menu_links() {
   t('Field dependencies');
   t('Field list');
   t('File system');
+  t('Home');
   t('IP address blocking');
   t('Image styles');
   t('Image toolkit');
