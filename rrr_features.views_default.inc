@@ -323,7 +323,11 @@ function rrr_features_views_default_views() {
   $handler->display->display_options['fields']['citation']['table'] = 'biblio';
   $handler->display->display_options['fields']['citation']['field'] = 'citation';
   $handler->display->display_options['fields']['citation']['label'] = '';
+  $handler->display->display_options['fields']['citation']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['citation']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['citation']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['citation']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['citation']['style_name'] = 'chicago';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -393,6 +397,8 @@ function rrr_features_views_default_views() {
   $handler->display->display_options['fields']['citation']['field'] = 'citation';
   $handler->display->display_options['fields']['citation']['label'] = '';
   $handler->display->display_options['fields']['citation']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['citation']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['citation']['style_name'] = 'chicago';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
