@@ -44,7 +44,7 @@ function rrr_features_field_default_field_instances() {
       'settings' => array(
         'autocomplete_match' => 'contains',
         'autocomplete_path' => 'node_reference/autocomplete',
-        'size' => 60,
+        'size' => 200,
       ),
       'type' => 'noderefcreate_autocomplete',
       'weight' => 32,
@@ -85,7 +85,7 @@ function rrr_features_field_default_field_instances() {
       'settings' => array(
         'autocomplete_match' => 'contains',
         'autocomplete_path' => 'node_reference/autocomplete',
-        'size' => 60,
+        'size' => 200,
       ),
       'type' => 'noderefcreate_autocomplete',
       'weight' => 31,
@@ -224,7 +224,7 @@ function rrr_features_field_default_field_instances() {
       'settings' => array(
         'autocomplete_match' => 'contains',
         'autocomplete_path' => 'node_reference/autocomplete',
-        'size' => 60,
+        'size' => 200,
       ),
       'type' => 'noderefcreate_autocomplete',
       'weight' => 34,
@@ -265,7 +265,7 @@ function rrr_features_field_default_field_instances() {
       'settings' => array(
         'autocomplete_match' => 'contains',
         'autocomplete_path' => 'node_reference/autocomplete',
-        'size' => 60,
+        'size' => 200,
       ),
       'type' => 'noderefcreate_autocomplete',
       'weight' => 33,
