@@ -52,9 +52,7 @@ function rrr_features_menu_default_menu_links() {
     'link_title' => 'Home',
     'options' => array(
       'identifier' => 'main-menu_home:<front>',
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -747,7 +745,7 @@ function rrr_features_menu_default_menu_links() {
     'link_title' => 'Module filter',
     'options' => array(
       'attributes' => array(
-        'title' => 'Configure how the modules page looks and acts.',
+        'title' => 'Configure settings for Module Filter.',
       ),
       'identifier' => 'management_module-filter:admin/config/user-interface/modulefilter',
     ),
@@ -1499,27 +1497,6 @@ function rrr_features_menu_default_menu_links() {
         'title' => 'a static page used for contacts, about us, welcome page, etc.',
       ),
       'identifier' => 'navigation_static-page:node/add/page',
-    ),
-    'module' => 'system',
-    'hidden' => 1,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'customized' => 1,
-    'parent_identifier' => 'navigation_add-content:node/add',
-  );
-  // Exported menu link: navigation_static-page:node/add/static-page
-  $menu_links['navigation_static-page:node/add/static-page'] = array(
-    'menu_name' => 'navigation',
-    'link_path' => 'node/add/static-page',
-    'router_path' => 'node/add',
-    'link_title' => 'static page',
-    'options' => array(
-      'attributes' => array(
-        'title' => 'a static page used for contacts, about us, welcome page, etc.',
-      ),
-      'identifier' => 'navigation_static-page:node/add/static-page',
     ),
     'module' => 'system',
     'hidden' => 1,
