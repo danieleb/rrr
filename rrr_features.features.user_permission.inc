@@ -34,7 +34,10 @@ function rrr_features_user_default_permissions() {
   // Exported permission: 'access biblio content'.
   $permissions['access biblio content'] = array(
     'name' => 'access biblio content',
-    'roles' => array(),
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'biblio',
   );
 
@@ -72,7 +75,9 @@ function rrr_features_user_default_permissions() {
   // Exported permission: 'access user profiles'.
   $permissions['access user profiles'] = array(
     'name' => 'access user profiles',
-    'roles' => array(),
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'user',
   );
 
@@ -86,7 +91,9 @@ function rrr_features_user_default_permissions() {
   // Exported permission: 'administer biblio'.
   $permissions['administer biblio'] = array(
     'name' => 'administer biblio',
-    'roles' => array(),
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'biblio',
   );
 
@@ -261,7 +268,9 @@ function rrr_features_user_default_permissions() {
   // Exported permission: 'cancel account'.
   $permissions['cancel account'] = array(
     'name' => 'cancel account',
-    'roles' => array(),
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'user',
   );
 
@@ -275,7 +284,9 @@ function rrr_features_user_default_permissions() {
   // Exported permission: 'create biblio content'.
   $permissions['create biblio content'] = array(
     'name' => 'create biblio content',
-    'roles' => array(),
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
@@ -310,7 +321,9 @@ function rrr_features_user_default_permissions() {
   // Exported permission: 'delete own biblio content'.
   $permissions['delete own biblio content'] = array(
     'name' => 'delete own biblio content',
-    'roles' => array(),
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
@@ -345,7 +358,9 @@ function rrr_features_user_default_permissions() {
   // Exported permission: 'edit any biblio content'.
   $permissions['edit any biblio content'] = array(
     'name' => 'edit any biblio content',
-    'roles' => array(),
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
@@ -359,7 +374,9 @@ function rrr_features_user_default_permissions() {
   // Exported permission: 'edit biblio authors'.
   $permissions['edit biblio authors'] = array(
     'name' => 'edit biblio authors',
-    'roles' => array(),
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'biblio',
   );
 
@@ -373,7 +390,9 @@ function rrr_features_user_default_permissions() {
   // Exported permission: 'edit own biblio content'.
   $permissions['edit own biblio content'] = array(
     'name' => 'edit own biblio content',
-    'roles' => array(),
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
@@ -401,7 +420,9 @@ function rrr_features_user_default_permissions() {
   // Exported permission: 'import from file'.
   $permissions['import from file'] = array(
     'name' => 'import from file',
-    'roles' => array(),
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'biblio',
   );
 
@@ -436,21 +457,30 @@ function rrr_features_user_default_permissions() {
   // Exported permission: 'show download links'.
   $permissions['show download links'] = array(
     'name' => 'show download links',
-    'roles' => array(),
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'biblio',
   );
 
   // Exported permission: 'show export links'.
   $permissions['show export links'] = array(
     'name' => 'show export links',
-    'roles' => array(),
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'biblio',
   );
 
   // Exported permission: 'show filter tab'.
   $permissions['show filter tab'] = array(
     'name' => 'show filter tab',
-    'roles' => array(),
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'biblio',
   );
 
@@ -464,7 +494,10 @@ function rrr_features_user_default_permissions() {
   // Exported permission: 'show sort links'.
   $permissions['show sort links'] = array(
     'name' => 'show sort links',
-    'roles' => array(),
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'biblio',
   );
 
@@ -478,23 +511,27 @@ function rrr_features_user_default_permissions() {
   // Exported permission: 'use text format full_html'.
   $permissions['use text format full_html'] = array(
     'name' => 'use text format full_html',
-    'roles' => array(
-      'authenticated user' => 'authenticated user',
-    ),
+    'roles' => array(),
     'module' => 'filter',
   );
 
   // Exported permission: 'view disqus comments'.
   $permissions['view disqus comments'] = array(
     'name' => 'view disqus comments',
-    'roles' => array(),
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'disqus',
   );
 
   // Exported permission: 'view full text'.
   $permissions['view full text'] = array(
     'name' => 'view full text',
-    'roles' => array(),
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'biblio',
   );
 
@@ -508,7 +545,9 @@ function rrr_features_user_default_permissions() {
   // Exported permission: 'view revisions'.
   $permissions['view revisions'] = array(
     'name' => 'view revisions',
-    'roles' => array(),
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'node',
   );
 

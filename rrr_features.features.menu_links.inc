@@ -52,7 +52,9 @@ function rrr_features_menu_default_menu_links() {
     'link_title' => 'Home',
     'options' => array(
       'identifier' => 'main-menu_home:<front>',
-      'attributes' => array(),
+      'attributes' => array(
+        'title' => '',
+      ),
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -745,7 +747,7 @@ function rrr_features_menu_default_menu_links() {
     'link_title' => 'Module filter',
     'options' => array(
       'attributes' => array(
-        'title' => 'Configure settings for Module Filter.',
+        'title' => 'Configure how the modules page looks and acts.',
       ),
       'identifier' => 'management_module-filter:admin/config/user-interface/modulefilter',
     ),
