@@ -1336,7 +1336,7 @@ function rrr_features_menu_default_menu_links() {
     'module' => 'system',
     'hidden' => 0,
     'external' => 0,
-    'has_children' => 0,
+    'has_children' => 1,
     'expanded' => 0,
     'weight' => 5,
     'customized' => 0,
